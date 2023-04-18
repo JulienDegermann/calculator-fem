@@ -3,22 +3,22 @@ const screen = document.querySelector('.screen')
 const keys = document.querySelector('.keys')
 const radios = document.querySelectorAll('input[type=radio]')
 const all = document.querySelectorAll('*')
+const buttons = document.querySelectorAll('button.button')
 
 let currentNumber = ''
 let memoryNumber = ''
 let operator = ""
 
-const buttons = document.querySelectorAll('button')
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-    let buttonInt = parseInt(button.innerText)
+    let buttonInt = parseInt(button.value)
         // try use switch/case instead of if
         if(Number.isInteger(buttonInt)) {
             currentNumber += buttonInt
             screen.innerHTML = currentNumber
         }
         else if(button.value === '.') { // add function to avoir multiple coma
-            currentNumber+= ','
+            currentNumber+= '.'
             screen.innerText = currentNumber
         }
         else if(button.value === '+' || button.value === '*' || button.value === '-' || button.value === '/'){
@@ -64,17 +64,3 @@ radios.forEach((radio) => {
 
     })
 })
-
-// for(radio of radios) {
-//     radio.addEventListener('change', () => {
-//         if(radio.target.checked) {
-//             console.log(radio.value)
-//             all.forEach((element) => {
-//                 // all.classList.remove('theme1', "theme2", "theme3")
-//                 element.classList.add(`theme${radio.value}`)
-//                 // console.log(element.classList)
-//             })
-
-//         }
-//     })
-// }
