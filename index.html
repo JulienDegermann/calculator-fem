@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Calculator app</title>
 
@@ -25,15 +29,24 @@
 </head>
 
 <body>
-  <h1>Bonjour</h1>
 
 <main>
-  <div>
+  <div class="pseudo-header">
     <span>calc</span>
-    <form action="">
-      <input type="radio" name="style" value="1">
-      <input type="radio" name="style" value="2">
-      <input type="radio" name="style" value="3">
+    <form class="toggle-bg" action="">
+      <fieldset>Theme</fieldset>
+      
+      <label for="1" class="theme"> 1
+        <input class="toggle" type="radio" name="style" value="1" checked>
+      </label>
+      
+      <label for="2" class="theme" >2
+        <input class="toggle" type="radio" name="style" value="2">
+      </label>
+      
+      <label for="3" class="theme" >3
+        <input class="toggle" type="radio" name="style" value="3">
+      </label>
     </form>
   </div>
 <div class="screen">

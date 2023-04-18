@@ -1,6 +1,8 @@
 
 const screen = document.querySelector('.screen')
 const keys = document.querySelector('.keys')
+const radios = document.querySelectorAll('input[type=radio]')
+const all = document.querySelectorAll('*')
 
 let currentNumber = ''
 let memoryNumber = ''
@@ -46,15 +48,33 @@ buttons.forEach((button) => {
         }
     })
 })
-button.addEventListener('click', () => {
-    
+all.forEach((element) => {
+    element.classList.add('theme1')
 })
 
 
+radios.forEach((radio) => {
+    radio.addEventListener('change', () => {
+        console.log(radio.value)
+        all.forEach((element) => {
+            element.classList.remove('theme1', 'theme2', 'theme3')
+            element.classList.add(`theme${radio.value}`)
+        })
 
 
+    })
+})
 
+// for(radio of radios) {
+//     radio.addEventListener('change', () => {
+//         if(radio.target.checked) {
+//             console.log(radio.value)
+//             all.forEach((element) => {
+//                 // all.classList.remove('theme1', "theme2", "theme3")
+//                 element.classList.add(`theme${radio.value}`)
+//                 // console.log(element.classList)
+//             })
 
-
-
-
+//         }
+//     })
+// }

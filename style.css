@@ -1,22 +1,70 @@
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 32px;
+  font-family: "League Spartan", sans-serif;
 }
 
-body{
+body {
   height: 100vh;
-  background-color: hsl(222, 26%, 31%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+body.theme1 {
+  background-color: hsl(222, 26%, 31%);
+}
+body.theme2 {
+  background-color: hsl(0, 0%, 90%);
+}
+body.theme3 {
+  background-color: hsl(268, 75%, 9%);
+}
+
+.pseudo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.pseudo-header.theme1 {
+  color: #fff;
+}
+.pseudo-header.theme2 {
+  color: hsl(60, 10%, 19%);
+}
+.pseudo-header.theme3 {
+  color: hsl(52, 100%, 62%);
+}
+
+form {
+  display: flex;
+}
+form * {
+  font-size: 0.4rem;
+  text-align: center;
+}
+form input {
+  background: green;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+fieldset {
+  display: block;
+  width: 100%;
+  align-self: flex-end;
+  text-align: end;
+  margin-right: 20px;
+  text-transform: uppercase;
+  border: none;
+  padding-bottom: 5px;
+}
 
 .screen {
-  background-color: hsl(224, 36%, 15%);
   height: 80px;
   width: 100%;
   border-radius: 10px;
@@ -26,8 +74,18 @@ body{
   flex-direction: column;
   justify-content: space-around;
   padding-right: 10px;
+}
+.screen.theme1 {
+  background-color: hsl(224, 36%, 15%);
   color: #fff;
-  /* overflow: hidden; */
+}
+.screen.theme2 {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+.screen.theme3 {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
 }
 
 .keys {
@@ -38,44 +96,84 @@ body{
   grid-template-rows: repeat(5, 70px);
   padding: 15px 10px;
   border-radius: 10px;
+}
+.keys.theme1 {
   background-color: hsl(223, 31%, 20%);
 }
+.keys.theme2 {
+  background-color: hsl(0, 5%, 81%);
+}
+.keys.theme3 {
+  background-color: hsl(268, 71%, 12%);
+}
 
-.keys > button{
+.keys > button {
   margin: 0 8px;
   padding: 8px 0;
   border-radius: 5px;
   border: none;
-  background-color: hsl(30, 25%, 89%);
-  color:hsl(221, 14%, 31%);
-  box-shadow: 0 5px hsl(28, 16%, 65%);
   cursor: pointer;
 }
+.keys > button.theme1 {
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  box-shadow: 0 5px hsl(28, 16%, 65%);
+}
+.keys > button.theme2 {
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(60, 10%, 19%);
+  box-shadow: 0 5px hsl(35, 11%, 61%);
+}
+.keys > button.theme3 {
+  background-color: hsl(268, 47%, 21%);
+  color: hsl(52, 100%, 62%);
+  box-shadow: 0 5px hsl(290, 70%, 36%);
+}
 
-button:active{
-  transform: translateY(2px)
+button:active {
+  transform: translateY(2px);
 }
 
 .column-span {
   grid-column: span 2;
 }
 
-button:nth-child(17), button:nth-child(4){
-  background-color: hsl(225, 21%, 49%);
-  box-shadow: 0 5px hsl(224, 28%, 35%);
-  color: hsl(30, 25%, 89%);
+button:nth-child(17),
+button:nth-child(4) {
   font-size: 18px;
   padding: 17px 0;
 }
+button:nth-child(17).theme1,
+button:nth-child(4).theme1 {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 5px hsl(224, 28%, 35%);
+  color: hsl(30, 25%, 89%);
+}
+button:nth-child(17).theme2,
+button:nth-child(4).theme2 {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 5px hsl(185, 58%, 25%);
+  color: white;
+}
+button:nth-child(17).theme3,
+button:nth-child(4).theme3 {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 5px hsl(285, 91%, 52%);
+  color: white;
+}
 
-button:nth-child(18){
+button:nth-child(18).theme1 {
   background-color: hsl(6, 63%, 50%);
   box-shadow: 0 5px hsl(6, 70%, 34%);
   color: hsl(30, 25%, 89%);
 }
-
-
-
-
-
-
+button:nth-child(18).theme2 {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0 5px hsl(25, 99%, 27%);
+  color: white;
+}
+button:nth-child(18).theme3 {
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0 5px hsl(177, 92%, 70%);
+  color: hsl(198, 20%, 13%);
+}/*# sourceMappingURL=style.css.map */
