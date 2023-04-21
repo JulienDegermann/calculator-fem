@@ -26,7 +26,24 @@ body.theme3 {
 
 main {
   padding: 20px;
-  width: 40%;
+  width: 100%;
+}
+
+.toggle-bg {
+  background-color: red;
+  height: 20px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+}
+.toggle-bg .toggle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: blue;
 }
 
 .pseudo-header {
