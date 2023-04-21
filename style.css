@@ -30,7 +30,6 @@ main {
 }
 
 .toggle-bg {
-  background-color: red;
   height: 20px;
   width: 100px;
   display: flex;
