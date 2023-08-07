@@ -27,6 +27,12 @@ body.theme3 {
 main {
   padding: 20px;
   width: 100%;
+  max-width: 500px;
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 100%;
+  }
 }
 
 .toggle-bg {

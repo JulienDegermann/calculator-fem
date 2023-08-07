@@ -25,6 +25,10 @@ body {
 main {
     padding: 20px;
     width: 100%;
+    max-width: 500px;
+    @media screen and (max-width: 500px) {
+        width: 100%;
+    }
 }
 .toggle-bg {
     // background-color: red;
